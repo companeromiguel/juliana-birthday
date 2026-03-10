@@ -13,7 +13,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "The Whisker & Waltz - 1st Birthday Invitation",
+  title: "Juliana's 1st Birthday Invitation",
   description: "Join us for a purr-fect celebration!",
 };
 

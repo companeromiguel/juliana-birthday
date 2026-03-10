@@ -9,6 +9,7 @@ import RSVPButton from './RSVPButton';
 import PhotoAlbum from './PhotoAlbum';
 import MessageBoard from './MessageBoard';
 import JourneyTimeline from './JourneyTimeline';
+import MusicPlayer from './MusicPlayer';
 import InteractiveBalloons from './InteractiveBalloons';
 import CountdownTimer from './CountdownTimer';
 import InteractiveCard from './InteractiveCard';
@@ -22,6 +23,7 @@ export default function InvitationContent() {
 
   return (
     <div ref={containerRef} className="relative min-h-[500vh]">
+      <MusicPlayer />
       <ParallaxBackground scrollYProgress={scrollYProgress} />
       <FloatingElements scrollYProgress={scrollYProgress} />
       
@@ -34,10 +36,10 @@ export default function InvitationContent() {
         >
           <ContentCard delay={0.2}>
             <motion.h1
-              className="text-4xl sm:text-5xl md:text-8xl font-bold text-center text-[#df6b86] mb-4"
+              className="text-3xl sm:text-4xl md:text-6xl lg:text-8xl font-bold text-center text-[#df6b86] leading-tight"
               style={{ fontFamily: 'Quicksand, sans-serif' }}
             >
-              {['T', 'h', 'e', ' ', 'W', 'h', 'i', 's', 'k', 'e', 'r', ' ', '&', ' ', 'W', 'a', 'l', 't', 'z'].map((letter, i) => (
+              {['J', 'u', 'l', 'i', 'a', 'n', 'a', "'", 's', ' ', '1', 's', 't', ' ', 'B', 'i', 'r', 't', 'h', 'd', 'a', 'y'].map((letter, i) => (
                 <motion.span
                   key={i}
                   initial={{ opacity: 0, y: 20 }}
@@ -53,7 +55,7 @@ export default function InvitationContent() {
                 </motion.span>
               ))}
             </motion.h1>
-            <p className="text-center text-lg sm:text-xl md:text-2xl text-gray-800 font-semibold">
+            <p className="text-center text-base sm:text-lg md:text-xl text-gray-600 mt-4">
               Join us for a purr-fect celebration!
             </p>
           </ContentCard>

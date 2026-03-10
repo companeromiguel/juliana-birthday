@@ -1,6 +1,6 @@
-# 🐱 The Whisker & Waltz - Digital Birthday Invitation
+# 🎂 Juliana's 1st Birthday - Digital Invitation
 
-A premium, interactive single-page scrollable experience for a 1st birthday celebration featuring parallax effects, smooth animations, and delightful cat-themed interactions.
+A premium, interactive single-page scrollable experience for Juliana's 1st birthday celebration featuring parallax effects, smooth animations, and delightful interactions.
 
 ## ✨ Features
 
