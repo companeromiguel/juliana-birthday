@@ -74,10 +74,21 @@ export default function InvitationContent() {
                 I'm Turning ONE!
               </h2>
               <div className="space-y-3 md:space-y-4 text-base md:text-lg text-gray-800">
-                <InfoRow icon="📅" label="Date" value="Saturday, April 15th, 2026" />
-                <InfoRow icon="⏰" label="Time" value="2:00 PM - 5:00 PM" />
-                <InfoRow icon="📍" label="Location" value="123 Whisker Lane, Kitty City" />
+                <InfoRow icon="📅" label="Date" value="Tuesday, May 19th, 2026" />
+                <InfoRow icon="⏰" label="Time" value="11:00 AM" />
+                <InfoRow icon="📍" label="Location" value="San Gregorio Magno Church" />
                 <InfoRow icon="🎈" label="Theme" value="Cats, Confetti & Cake!" />
+              </div>
+              
+              <div className="mt-6 pt-6 border-t-2 border-[#FFD700]">
+                <h3 className="text-2xl sm:text-3xl font-bold text-center mb-4 text-[#FFC0CB]">
+                  Reception to Follow
+                </h3>
+                <div className="space-y-3 md:space-y-4 text-base md:text-lg text-gray-800">
+                  <InfoRow icon="⏰" label="Time" value="3:00 PM" />
+                  <InfoRow icon="📍" label="Location" value="Lapidario" />
+                  <InfoRow icon="🗺️" label="Landmark" value="JRA @ STEEL or Kiddos Milktea" />
+                </div>
               </div>
             </div>
           </ContentCard>
