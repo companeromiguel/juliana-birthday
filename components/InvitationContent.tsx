@@ -95,6 +95,17 @@ export default function InvitationContent() {
 
           <ContentCard delay={0.6}>
             <div className="text-center">
+              <div className="bg-white/90 backdrop-blur-sm rounded-3xl p-6 md:p-8 shadow-xl border-2 border-[#FFD700] mb-6">
+                <p className="text-base md:text-lg text-gray-700 leading-relaxed">
+                  To help us finalize our arrangements with the Church and the venue, please let us know if you will be joining us for both the <span className="font-semibold text-[#FFC0CB]">Baptismal Ceremony</span> and the <span className="font-semibold text-[#FFC0CB]">Reception</span>, or for the <span className="font-semibold text-[#FFC0CB]">Reception only</span>.
+                </p>
+                <p className="text-base md:text-lg text-gray-700 mt-4">
+                  We kindly request your final confirmation by <span className="font-bold text-[#FFC0CB]">May 17</span>.
+                </p>
+                <p className="text-base md:text-lg text-[#FFC0CB] font-semibold mt-4">
+                  Your presence would mean the world to us! 💕
+                </p>
+              </div>
               <RSVPButton />
             </div>
           </ContentCard>
