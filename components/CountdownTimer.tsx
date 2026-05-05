@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
+import { Calendar, Clock, Timer, Zap } from 'lucide-react';
 
 export default function CountdownTimer() {
   const targetDate = new Date('2026-05-19T11:00:00').getTime();
@@ -39,15 +40,15 @@ export default function CountdownTimer() {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
       >
-        ⏰ Countdown to the Party!
+        <Clock className="w-10 h-10 md:w-12 md:h-12 inline-block mr-3" /> Countdown to the Party!
       </motion.h2>
 
       <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
         {[
-          { label: 'Days', value: timeLeft.days, emoji: '📅' },
-          { label: 'Hours', value: timeLeft.hours, emoji: '⏰' },
-          { label: 'Minutes', value: timeLeft.minutes, emoji: '⏱️' },
-          { label: 'Seconds', value: timeLeft.seconds, emoji: '⚡' },
+          { label: 'Days', value: timeLeft.days, icon: Calendar },
+          { label: 'Hours', value: timeLeft.hours, icon: Clock },
+          { label: 'Minutes', value: timeLeft.minutes, icon: Timer },
+          { label: 'Seconds', value: timeLeft.seconds, icon: Zap },
         ].map((item, index) => (
           <motion.div
             key={item.label}
@@ -58,7 +59,7 @@ export default function CountdownTimer() {
             transition={{ delay: index * 0.1 }}
             whileHover={{ scale: 1.05, rotate: 5 }}
           >
-            <div className="text-4xl mb-2">{item.emoji}</div>
+            <item.icon className="w-10 h-10 mx-auto mb-2 text-[#FFC0CB]" />
             <motion.div
               className="text-4xl md:text-5xl font-bold text-[#FFC0CB] mb-2"
               key={item.value}

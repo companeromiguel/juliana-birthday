@@ -2,6 +2,7 @@
 
 import { useRef } from 'react';
 import { motion, useScroll } from 'framer-motion';
+import { Calendar, Clock, MapPin, Sparkles, MapPinned, Cake, Balloon, PartyPopper, Heart } from 'lucide-react';
 import ParallaxBackground from './ParallaxBackground';
 import FloatingElements from './FloatingElements';
 import ContentCard from './ContentCard';
@@ -68,16 +69,16 @@ export default function InvitationContent() {
                 animate={{ scale: 1 }}
                 transition={{ delay: 0.6, type: 'spring' }}
               >
-                <span className="text-6xl md:text-8xl">🎂</span>
+                <Cake className="w-20 h-20 md:w-24 md:h-24 mx-auto text-[#FFC0CB]" />
               </motion.div>
               <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-center mb-4 text-[#FFC0CB]">
                 I'm Turning ONE!
               </h2>
               <div className="space-y-3 md:space-y-4 text-base md:text-lg text-gray-800">
-                <InfoRow icon="📅" label="Date" value="Tuesday, May 19th, 2026" />
-                <InfoRow icon="⏰" label="Time" value="11:00 AM" />
-                <InfoRow icon="📍" label="Location" value="San Gregorio Magno Church" />
-                <InfoRow icon="🎈" label="Theme" value="Cats, Confetti & Cake!" />
+                <InfoRow icon={<Calendar className="w-6 h-6 md:w-7 md:h-7" />} label="Date" value="Tuesday, May 19th, 2026" />
+                <InfoRow icon={<Clock className="w-6 h-6 md:w-7 md:h-7" />} label="Time" value="11:00 AM" />
+                <InfoRow icon={<MapPin className="w-6 h-6 md:w-7 md:h-7" />} label="Location" value="San Gregorio Magno Church" />
+                <InfoRow icon={<Sparkles className="w-6 h-6 md:w-7 md:h-7" />} label="Theme" value="Cats, Confetti & Cake!" />
               </div>
               
               <div className="mt-6 pt-6 border-t-2 border-[#FFD700]">
@@ -85,9 +86,9 @@ export default function InvitationContent() {
                   Reception to Follow
                 </h3>
                 <div className="space-y-3 md:space-y-4 text-base md:text-lg text-gray-800">
-                  <InfoRow icon="⏰" label="Time" value="3:00 PM" />
-                  <InfoRow icon="📍" label="Location" value="Lapidario" />
-                  <InfoRow icon="🗺️" label="Landmark" value="JRA @ STEEL or Kiddos Milktea" />
+                  <InfoRow icon={<Clock className="w-6 h-6 md:w-7 md:h-7" />} label="Time" value="3:00 PM" />
+                  <InfoRow icon={<MapPin className="w-6 h-6 md:w-7 md:h-7" />} label="Location" value="Lapidario" />
+                  <InfoRow icon={<MapPinned className="w-6 h-6 md:w-7 md:h-7" />} label="Landmark" value="JRA @ STEEL or Kiddos Milktea" />
                 </div>
               </div>
             </div>
@@ -102,8 +103,8 @@ export default function InvitationContent() {
                 <p className="text-base md:text-lg text-gray-700 mt-4">
                   We kindly request your final confirmation by <span className="font-bold text-[#FFC0CB]">May 17</span>.
                 </p>
-                <p className="text-base md:text-lg text-[#FFC0CB] font-semibold mt-4">
-                  Your presence would mean the world to us! 💕
+                <p className="text-base md:text-lg text-[#FFC0CB] font-semibold mt-4 flex items-center justify-center gap-2">
+                  Your presence would mean the world to us! <Heart className="w-5 h-5 fill-current" />
                 </p>
               </div>
               <RSVPButton />
@@ -137,16 +138,18 @@ export default function InvitationContent() {
           <ContentCard delay={1.4}>
             <div className="text-center py-12">
               <motion.div
-                className="text-6xl mb-4"
+                className="mb-4 flex justify-center"
                 animate={{ rotate: [0, 10, -10, 0] }}
                 transition={{ duration: 2, repeat: Infinity }}
               >
-                🎈
+                <Balloon className="w-16 h-16 text-[#FFC0CB]" />
               </motion.div>
               <h3 className="text-2xl font-bold text-[#df6b86] mb-4">
                 Can't wait to celebrate with you!
               </h3>
-              <p className="text-gray-800 font-medium">See you at the party! 🎉</p>
+              <p className="text-gray-800 font-medium flex items-center justify-center gap-2">
+                See you at the party! <PartyPopper className="w-5 h-5 text-[#FFC0CB]" />
+              </p>
               
               {/* Subtle creator credit */}
               <p className="text-xs text-gray-400 opacity-30 mt-8">© ninong migs</p>
@@ -158,14 +161,14 @@ export default function InvitationContent() {
   );
 }
 
-function InfoRow({ icon, label, value }: { icon: string; label: string; value: string }) {
+function InfoRow({ icon, label, value }: { icon: React.ReactNode; label: string; value: string }) {
   return (
     <motion.div
       className="flex items-center gap-3 md:gap-4 p-3 md:p-4 bg-[#FFFDD0]/50 rounded-xl"
       whileHover={{ scale: 1.02, x: 10 }}
       transition={{ type: 'spring', stiffness: 300 }}
     >
-      <span className="text-2xl md:text-3xl flex-shrink-0">{icon}</span>
+      <span className="text-[#FFC0CB] flex-shrink-0">{icon}</span>
       <div className="text-left">
         <p className="font-bold text-[#D91A7A] text-sm md:text-base">{label}</p>
         <p className="text-sm md:text-base text-gray-800 font-medium">{value}</p>
