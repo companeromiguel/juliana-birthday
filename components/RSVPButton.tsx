@@ -11,7 +11,7 @@ export default function RSVPButton() {
     setClicked(true);
     // Redirect to Google Form
     setTimeout(() => {
-      window.open('https://docs.google.com/forms/d/e/1FAIpQLScHKdMXIue1PzE4d0A_uSS1Q_50pvlE0zvNjCFeAzhYgJX8DA/viewform?usp=dialog', '_blank');
+      window.open('https://docs.google.com/forms/d/e/1FAIpQLSdGR0iQsXDWwsW2Yblx49jbR0pdb3RbWGd5uIBOBatXNulvVw/viewform', '_blank');
       setClicked(false);
     }, 500);
   };

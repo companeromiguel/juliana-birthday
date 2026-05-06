@@ -22,12 +22,7 @@ export default function MessageBoard() {
       message: 'Happy Birthday to the cutest little munchkin! Can\'t wait to celebrate with you! 🎉',
       emoji: '👩',
     },
-    {
-      id: 4,
-      from: 'Uncle Mike',
-      message: 'One year of pure awesomeness! Keep being amazing, little one! 🌟',
-      emoji: '👨',
-    },
+    
   ];
 
   return (
