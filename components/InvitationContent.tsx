@@ -8,8 +8,6 @@ import FloatingElements from './FloatingElements';
 import ContentCard from './ContentCard';
 import RSVPButton from './RSVPButton';
 import PhotoAlbum from './PhotoAlbum';
-import MessageBoard from './MessageBoard';
-import JourneyTimeline from './JourneyTimeline';
 import MusicPlayer from './MusicPlayer';
 import InteractiveBalloons from './InteractiveBalloons';
 import CountdownTimer from './CountdownTimer';
@@ -116,26 +114,18 @@ export default function InvitationContent() {
           </ContentCard>
 
           <ContentCard delay={0.8}>
-            <JourneyTimeline />
-          </ContentCard>
-
-          <ContentCard delay={0.9}>
             <InteractiveBalloons />
           </ContentCard>
 
-          <ContentCard delay={1.0}>
+          <ContentCard delay={0.9}>
             <PhotoAlbum />
           </ContentCard>
 
-          <ContentCard delay={1.1}>
+          <ContentCard delay={1.0}>
             <InteractiveCard />
           </ContentCard>
 
-          <ContentCard delay={1.2}>
-            <MessageBoard />
-          </ContentCard>
-
-          <ContentCard delay={1.4}>
+          <ContentCard delay={1.1}>
             <div className="text-center py-12">
               <motion.div
                 className="mb-4 flex justify-center"
