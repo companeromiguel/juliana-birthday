@@ -9,12 +9,12 @@ export default function PhotoAlbum() {
 
   // Placeholder images - replace with actual celebrant photos
   const photos = [
-    { id: 1, src: '/photos/photo1.jpg', caption: 'First smile 💕' },
-    { id: 2, src: '/photos/photo2.jpg', caption: 'Learning to crawl 🐾' },
-    { id: 3, src: '/photos/photo3.jpg', caption: 'First birthday photoshoot 🎂' },
-    { id: 4, src: '/photos/photo4.jpg', caption: 'Playing with toys 🧸' },
-    { id: 5, src: '/photos/photo5.jpg', caption: 'Nap time cuteness 😴' },
-    { id: 6, src: '/photos/photo6.jpg', caption: 'Growing so fast! 🌟' },
+    { id: 1, src: '/photos/photo1.jpg' },
+    { id: 2, src: '/photos/photo2.jpg' },
+    { id: 3, src: '/photos/photo3.jpg' },
+    { id: 4, src: '/photos/photo4.jpg' },
+    { id: 5, src: '/photos/photo5.jpg' },
+    { id: 6, src: '/photos/photo6.jpg' },
   ];
 
   const toggleLike = (id: number, e: React.MouseEvent) => {
@@ -49,11 +49,10 @@ export default function PhotoAlbum() {
             whileTap={{ scale: 0.95 }}
             onClick={() => setSelectedImage(index)}
           >
-            {/* Placeholder - shows caption until real images are added */}
+            {/* Placeholder - shows until real images are added */}
             <div className="absolute inset-0 flex items-center justify-center p-4 text-center">
               <div>
                 <p className="text-4xl mb-2">🐱</p>
-                <p className="text-sm font-semibold text-gray-800">{photo.caption}</p>
                 <p className="text-xs text-gray-600 mt-2 font-medium">Add photo here</p>
               </div>
             </div>
@@ -98,7 +97,6 @@ export default function PhotoAlbum() {
                 <div className="aspect-square bg-gradient-to-br from-[#FFFDD0] to-[#FFC0CB] rounded-2xl flex items-center justify-center mb-4">
                   <div>
                     <p className="text-8xl mb-4">🐱</p>
-                    <p className="text-xl font-semibold text-gray-700">{photos[selectedImage].caption}</p>
                   </div>
                 </div>
                 <p className="text-gray-600 mt-4">Tap outside to close</p>
