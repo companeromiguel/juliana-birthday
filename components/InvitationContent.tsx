@@ -2,7 +2,7 @@
 
 import { useRef } from 'react';
 import { motion, useScroll } from 'framer-motion';
-import { Calendar, Clock, MapPin, Sparkles, MapPinned, Cake, Balloon, PartyPopper, Heart } from 'lucide-react';
+import { Calendar, Clock, MapPin, Sparkles, MapPinned, Cake, Balloon, PartyPopper, Heart, Map } from 'lucide-react';
 import ParallaxBackground from './ParallaxBackground';
 import FloatingElements from './FloatingElements';
 import ContentCard from './ContentCard';
@@ -88,6 +88,33 @@ export default function InvitationContent() {
                   <InfoRow icon={<MapPin className="w-6 h-6 md:w-7 md:h-7" />} label="Location" value="Lapidario" />
                   <InfoRow icon={<MapPinned className="w-6 h-6 md:w-7 md:h-7" />} label="Landmark" value="JRA @ STEEL or Kiddos Milktea" />
                 </div>
+                
+                {/* Embedded Map */}
+                <div className="mt-4 rounded-xl overflow-hidden shadow-lg">
+                  <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d241.89847469847!2d121.0166!3d14.5994!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTTCsDM1JzU3LjgiTiAxMjHCsDAwJzU5LjgiRQ!5e0!3m2!1sen!2sph!4v1234567890"
+                    width="100%"
+                    height="200"
+                    style={{ border: 0 }}
+                    allowFullScreen
+                    loading="lazy"
+                    referrerPolicy="no-referrer-when-downgrade"
+                    title="Reception Location Map"
+                  />
+                </div>
+                
+                {/* Map Link Button */}
+                <motion.a
+                  href="https://maps.app.goo.gl/dto21LxfXRqLrKGT9"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="mt-3 flex items-center justify-center gap-2 px-4 py-2 bg-[#FFC0CB] text-white rounded-full font-semibold text-sm shadow-lg"
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                >
+                  <Map className="w-4 h-4" />
+                  Open in Google Maps
+                </motion.a>
               </div>
             </div>
           </ContentCard>
