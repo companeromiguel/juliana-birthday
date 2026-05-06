@@ -12,6 +12,7 @@ import MusicPlayer from './MusicPlayer';
 import InteractiveBalloons from './InteractiveBalloons';
 import CountdownTimer from './CountdownTimer';
 import InteractiveCard from './InteractiveCard';
+import DressCode from './DressCode';
 
 export default function InvitationContent() {
   const containerRef = useRef<HTMLDivElement>(null);
@@ -137,10 +138,14 @@ export default function InvitationContent() {
           </ContentCard>
 
           <ContentCard delay={0.7}>
-            <CountdownTimer />
+            <DressCode />
           </ContentCard>
 
           <ContentCard delay={0.8}>
+            <CountdownTimer />
+          </ContentCard>
+
+          <ContentCard delay={0.9}>
             <InteractiveBalloons />
           </ContentCard>
 
