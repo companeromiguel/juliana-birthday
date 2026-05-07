@@ -7,14 +7,14 @@ export default function PhotoAlbum() {
   const [selectedImage, setSelectedImage] = useState<number | null>(null);
   const [liked, setLiked] = useState<number[]>([]);
 
-  // Placeholder images - replace with actual celebrant photos
+  // Actual celebrant photos
   const photos = [
-    { id: 1, src: '/photos/photo1.jpg' },
-    { id: 2, src: '/photos/photo2.jpg' },
-    { id: 3, src: '/photos/photo3.jpg' },
-    { id: 4, src: '/photos/photo4.jpg' },
-    { id: 5, src: '/photos/photo5.jpg' },
-    { id: 6, src: '/photos/photo6.jpg' },
+    { id: 1, src: '/photos/1.png' },
+    { id: 2, src: '/photos/2.png' },
+    { id: 3, src: '/photos/3.png' },
+    { id: 4, src: '/photos/4.png' },
+    { id: 5, src: '/photos/5.png' },
+    { id: 6, src: '/photos/6.png' },
   ];
 
   const toggleLike = (id: number, e: React.MouseEvent) => {
@@ -49,13 +49,12 @@ export default function PhotoAlbum() {
             whileTap={{ scale: 0.95 }}
             onClick={() => setSelectedImage(index)}
           >
-            {/* Placeholder - shows until real images are added */}
-            <div className="absolute inset-0 flex items-center justify-center p-4 text-center">
-              <div>
-                <p className="text-4xl mb-2">🐱</p>
-                <p className="text-xs text-gray-600 mt-2 font-medium">Add photo here</p>
-              </div>
-            </div>
+            {/* Photo Image */}
+            <img
+              src={photo.src}
+              alt={`Memory ${photo.id}`}
+              className="absolute inset-0 w-full h-full object-cover"
+            />
 
             {/* Like button */}
             <motion.button
@@ -94,10 +93,12 @@ export default function PhotoAlbum() {
               onClick={(e) => e.stopPropagation()}
             >
               <div className="bg-white rounded-3xl p-8 text-center">
-                <div className="aspect-square bg-gradient-to-br from-[#FFFDD0] to-[#FFC0CB] rounded-2xl flex items-center justify-center mb-4">
-                  <div>
-                    <p className="text-8xl mb-4">🐱</p>
-                  </div>
+                <div className="aspect-square bg-gradient-to-br from-[#FFFDD0] to-[#FFC0CB] rounded-2xl overflow-hidden mb-4">
+                  <img
+                    src={photos[selectedImage].src}
+                    alt={`Memory ${photos[selectedImage].id}`}
+                    className="w-full h-full object-cover"
+                  />
                 </div>
                 <p className="text-gray-600 mt-4">Tap outside to close</p>
               </div>
