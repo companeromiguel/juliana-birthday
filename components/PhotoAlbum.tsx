@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import Image from 'next/image';
 
 export default function PhotoAlbum() {
   const [selectedImage, setSelectedImage] = useState<number | null>(null);
@@ -9,12 +10,12 @@ export default function PhotoAlbum() {
 
   // Actual celebrant photos
   const photos = [
-    { id: 1, src: '/photos/1.png' },
-    { id: 2, src: '/photos/2.png' },
-    { id: 3, src: '/photos/3.png' },
-    { id: 4, src: '/photos/4.png' },
-    { id: 5, src: '/photos/5.png' },
-    { id: 6, src: '/photos/6.png' },
+    { id: 1, src: '/photos/1.jpg' },
+    { id: 2, src: '/photos/2.jpg' },
+    { id: 3, src: '/photos/3.jpg' },
+    { id: 4, src: '/photos/4.jpg' },
+    { id: 5, src: '/photos/5.jpg' },
+    { id: 6, src: '/photos/6.jpg' },
   ];
 
   const toggleLike = (id: number, e: React.MouseEvent) => {
@@ -50,10 +51,12 @@ export default function PhotoAlbum() {
             onClick={() => setSelectedImage(index)}
           >
             {/* Photo Image */}
-            <img
+            <Image
               src={photo.src}
               alt={`Memory ${photo.id}`}
-              className="absolute inset-0 w-full h-full object-cover"
+              fill
+              className="object-cover"
+              sizes="(max-width: 768px) 50vw, 33vw"
             />
 
             {/* Like button */}
@@ -93,11 +96,13 @@ export default function PhotoAlbum() {
               onClick={(e) => e.stopPropagation()}
             >
               <div className="bg-white rounded-3xl p-8 text-center">
-                <div className="aspect-square bg-gradient-to-br from-[#FFFDD0] to-[#FFC0CB] rounded-2xl overflow-hidden mb-4">
-                  <img
+                <div className="aspect-square bg-gradient-to-br from-[#FFFDD0] to-[#FFC0CB] rounded-2xl overflow-hidden mb-4 relative">
+                  <Image
                     src={photos[selectedImage].src}
                     alt={`Memory ${photos[selectedImage].id}`}
-                    className="w-full h-full object-cover"
+                    fill
+                    className="object-cover"
+                    sizes="(max-width: 768px) 90vw, 800px"
                   />
                 </div>
                 <p className="text-gray-600 mt-4">Tap outside to close</p>
