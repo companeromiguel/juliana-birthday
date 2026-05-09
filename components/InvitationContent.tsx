@@ -74,7 +74,7 @@ export default function InvitationContent() {
                 I'm Turning ONE!
               </h2>
               <div className="space-y-3 md:space-y-4 text-base md:text-lg text-gray-800">
-                <InfoRow icon={<Calendar className="w-6 h-6 md:w-7 md:h-7" />} label="Date" value="Tuesday, May 19th, 2026" />
+                <InfoRow icon={<Calendar className="w-6 h-6 md:w-7 md:h-7" />} label="Date" value="Sunday, May 24th, 2026" />
                 <InfoRow icon={<Clock className="w-6 h-6 md:w-7 md:h-7" />} label="Time" value="11:00 AM" />
                 <InfoRow icon={<MapPin className="w-6 h-6 md:w-7 md:h-7" />} label="Location" value="San Gregorio Magno Church" />
                 <InfoRow icon={<Sparkles className="w-6 h-6 md:w-7 md:h-7" />} label="Theme" value="Cats, Confetti & Cake!" />

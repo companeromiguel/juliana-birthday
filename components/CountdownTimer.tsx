@@ -5,7 +5,7 @@ import { motion } from 'framer-motion';
 import { Calendar, Clock, Timer, Zap } from 'lucide-react';
 
 export default function CountdownTimer() {
-  const targetDate = new Date('2026-05-19T11:00:00').getTime();
+  const targetDate = new Date('2026-05-24T11:00:00').getTime();
   const [timeLeft, setTimeLeft] = useState({
     days: 0,
     hours: 0,
