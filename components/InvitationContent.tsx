@@ -85,7 +85,7 @@ export default function InvitationContent() {
                   Reception to Follow
                 </h3>
                 <div className="space-y-3 md:space-y-4 text-base md:text-lg text-gray-800">
-                  <InfoRow icon={<Clock className="w-6 h-6 md:w-7 md:h-7" />} label="Time" value="To Follow" />
+                  <InfoRow icon={<Clock className="w-6 h-6 md:w-7 md:h-7" />} label="Time" value="To Follow After the Ceremony" />
                   <InfoRow icon={<MapPin className="w-6 h-6 md:w-7 md:h-7" />} label="Location" value="Lapidario" />
                   <InfoRow icon={<MapPinned className="w-6 h-6 md:w-7 md:h-7" />} label="Landmark" value="JRA @ STEEL or Kiddos Milktea" />
                 </div>
